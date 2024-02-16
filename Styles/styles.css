@@ -1,2 +1,56 @@
 @import url("https://use.typekit.net/efa7ivj.css");
 /* VARIABLES */
+@keyframes iconWiggle {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-5%) scale(1.2);
+  }
+  50% {
+    transform: translateY(0) scale(1.4);
+  }
+  75% {
+    transform: tranlateY(-5%) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  font-family: "gitan-latin", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(180deg, rgb(248, 247, 195) 0%, rgb(231, 135, 119) 100%);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .slide {
+  border: 20px double rgb(17, 81, 15);
+  position: relative;
+}
+.slider .slide span {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  cursor: pointer;
+}
+.slider .slide span:hover {
+  color: rgb(255, 255, 255);
+  transform-origin: center;
+  animation: iconWiggle 2s infinite;
+}
+.slider .slide span.active {
+  color: tan;
+}/*# sourceMappingURL=styles.css.map */
